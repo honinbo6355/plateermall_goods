@@ -1,17 +1,13 @@
-1045 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 9308 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
-1049 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1049 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
-2589 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 2.124 seconds (JVM running for 3.448)
-2590 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
-1083 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 3968 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
-1087 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1087 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
-2604 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 2.09 seconds (JVM running for 3.703)
-2606 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
-1059 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 4000 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
-1062 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1063 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
-2643 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+1464 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 1304 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1480 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1481 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4240 [main] ERROR com.plateer.config.DB - MariaDB Connector/J
+4757 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.127 seconds (JVM running for 6.483)
+4760 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1670 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 7848 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1675 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1675 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4273 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -19,24 +15,17 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field dataSource in com.plateer.config.DB required a bean of type 'javax.sql.DataSource' that could not be found.
+The dependencies of some of the beans in the application context form a cycle:
 
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-The following candidates were found but could not be injected:
-	- Bean method 'dataSource' in 'JndiDataSourceAutoConfiguration' not loaded because @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'jndi-name'
-	- Bean method 'dataSource' in 'XADataSourceAutoConfiguration' not loaded because @ConditionalOnClass did not find required class 'javax.transaction.TransactionManager'
+┌─────┐
+|  mybatisConfiguration defined in file [C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes\com\plateer\config\MybatisConfiguration.class]
+└─────┘
 
 
-Action:
-
-Consider revisiting the entries above or defining a bean of type 'javax.sql.DataSource' in your configuration.
-
-1215 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 8416 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
-1220 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1221 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
-2873 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+1376 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 8828 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1382 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1383 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+3283 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -44,20 +33,459 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+The dependencies of some of the beans in the application context form a cycle:
 
-Reason: Failed to determine a suitable driver class
+┌─────┐
+|  mybatisConfiguration defined in file [C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes\com\plateer\config\MybatisConfiguration.class]
+└─────┘
 
 
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-
-1314 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 13676 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
-1318 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1319 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
-3627 [main] ERROR com.plateer.config.DB - MariaDB Connector/J
-4031 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.477 seconds (JVM running for 4.962)
-4033 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1352 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 2092 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1356 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1357 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4355 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.88 seconds (JVM running for 5.319)
+4357 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1409 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 1396 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1413 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1413 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4372 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.788 seconds (JVM running for 5.377)
+4375 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1402 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 1480 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1407 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1408 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4282 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.747 seconds (JVM running for 5.329)
+4285 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1446 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 11164 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1453 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1453 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4473 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.94 seconds (JVM running for 5.431)
+4475 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1270 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 12924 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1274 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1275 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4849 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.369 seconds (JVM running for 5.733)
+4851 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1596 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 6900 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1600 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1601 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+5702 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 5.022 seconds (JVM running for 6.693)
+5707 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1650 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 10260 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1654 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1655 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+5687 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.847 seconds (JVM running for 6.748)
+5690 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1689 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 2800 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1693 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1694 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+6294 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 5.564 seconds (JVM running for 7.923)
+6297 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1228 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 10524 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1232 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1235 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4484 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.961 seconds (JVM running for 5.492)
+4486 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1553 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 2884 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1561 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1561 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+5561 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.886 seconds (JVM running for 7.197)
+5567 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+25680 [http-nio-9999-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+25680 [http-nio-9999-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+28316 [http-nio-9999-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+28321 [http-nio-9999-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+43572 [http-nio-9999-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+43591 [http-nio-9999-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+85523 [http-nio-9999-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/1203973748': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+85529 [http-nio-9999-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}] with root cause
+java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/goods/undefined': {public java.util.List com.plateer.controller.GoodsController.getGoodsDtoList(java.lang.String), public com.plateer.domain.dto.GoodsDto com.plateer.controller.GoodsController.getGoodsDto(java.lang.String)}
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:395)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+1295 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 3000 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1299 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1299 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+4273 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.737 seconds (JVM running for 6.175)
+4276 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1827 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 4124 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1833 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1834 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+5017 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.17 seconds (JVM running for 6.034)
+5020 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1850 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 5052 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1855 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1856 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+5885 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 4.985 seconds (JVM running for 6.911)
+5888 [main] ERROR c.p.ShoppingGoodsBootApplication - hello

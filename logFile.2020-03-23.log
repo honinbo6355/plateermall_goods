@@ -1,0 +1,63 @@
+1045 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 9308 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1049 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1049 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+2589 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 2.124 seconds (JVM running for 3.448)
+2590 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1083 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 3968 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1087 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1087 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+2604 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 2.09 seconds (JVM running for 3.703)
+2606 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
+1059 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 4000 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1062 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1063 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+2643 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSource in com.plateer.config.DB required a bean of type 'javax.sql.DataSource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'dataSource' in 'JndiDataSourceAutoConfiguration' not loaded because @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'jndi-name'
+	- Bean method 'dataSource' in 'XADataSourceAutoConfiguration' not loaded because @ConditionalOnClass did not find required class 'javax.transaction.TransactionManager'
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'javax.sql.DataSource' in your configuration.
+
+1215 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 8416 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1220 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1221 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+2873 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+1314 [main] INFO  c.p.ShoppingGoodsBootApplication - Starting ShoppingGoodsBootApplication on DESKTOP-320BHRG with PID 13676 (C:\Users\notebiz1029\Documents\git\shoppingmall_goods\shoppingmall-goods-boot\target\classes started by notebiz1029 in C:\Users\notebiz1029\Documents\git\shoppingmall_goods)
+1318 [main] DEBUG c.p.ShoppingGoodsBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1319 [main] INFO  c.p.ShoppingGoodsBootApplication - No active profile set, falling back to default profiles: default
+3627 [main] ERROR com.plateer.config.DB - MariaDB Connector/J
+4031 [main] INFO  c.p.ShoppingGoodsBootApplication - Started ShoppingGoodsBootApplication in 3.477 seconds (JVM running for 4.962)
+4033 [main] ERROR c.p.ShoppingGoodsBootApplication - hello
