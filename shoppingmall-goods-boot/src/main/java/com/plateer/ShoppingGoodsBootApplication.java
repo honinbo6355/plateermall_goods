@@ -13,6 +13,5 @@ public class ShoppingGoodsBootApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(ShoppingGoodsBootApplication.class, args);
-        log.error("hello");
     }
 }

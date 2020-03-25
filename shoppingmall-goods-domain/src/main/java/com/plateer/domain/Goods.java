@@ -1,15 +1,15 @@
-package com.plateer.domain.dto;
-
-import lombok.*;
+package com.plateer.domain;
 
 import java.util.List;
+
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class GoodsDto {
+public class Goods {
 
     private String imgUrl;
     private String goodsCode;
@@ -27,5 +27,4 @@ public class GoodsDto {
     private List<InfoTableRow> infoTable;
     private List<Option> options;
     private List<CardPromotion> cardPromotions;
-
 }

@@ -12,6 +12,8 @@
         <module>shoppingmall-goods-boot</module>
         <module>shoppingmall-goods-rest</module>
         <module>shoppingmall-goods-domain</module>
+        <module>shoppingmall-goods-service</module>
+        <module>shoppingmall-goods-store</module>
     </modules>
 
     <packaging>pom</packaging>

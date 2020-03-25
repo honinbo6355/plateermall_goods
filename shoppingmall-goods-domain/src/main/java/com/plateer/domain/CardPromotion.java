@@ -1,4 +1,4 @@
-package com.plateer.domain.dto;
+package com.plateer.domain;
 
 import lombok.*;
 
@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class CardPromotion {
+
     String card;
     int maximum;
     int minimum;

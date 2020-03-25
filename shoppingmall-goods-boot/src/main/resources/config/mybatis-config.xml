@@ -18,7 +18,7 @@
     <!-- Mybatis의 설정 -->
     <settings>
         <setting name="cacheEnabled" value="true"/>
-        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
         <setting name="defaultStatementTimeout" value="1000"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
