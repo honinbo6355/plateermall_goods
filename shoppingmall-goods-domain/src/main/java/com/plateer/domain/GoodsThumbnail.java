@@ -9,8 +9,8 @@ import lombok.*;
 @ToString
 public class GoodsThumbnail {
 
-    private String imgUrl;
     private String goodsCode;
+    private String imgUrl;
     private String seller;
     private String copy;
     private String title;

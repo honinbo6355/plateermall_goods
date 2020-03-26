@@ -10,7 +10,10 @@
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Option">
-        SELECT text, text AS "value" FROM GoodsOption WHERE goodsCode = #{goodsCode} ORDER BY text;
+        SELECT text, text AS "value"
+        FROM GoodsOption
+        WHERE goodsCode = #{goodsCode}
+        ORDER BY text;
     </select>
 
     <update id="update">

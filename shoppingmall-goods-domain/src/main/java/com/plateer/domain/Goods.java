@@ -11,8 +11,8 @@ import lombok.*;
 @ToString
 public class Goods {
 
-    private String imgUrl;
     private String goodsCode;
+    private String imgUrl;
     private String modelNo;
     private String seller;
     private String copy;

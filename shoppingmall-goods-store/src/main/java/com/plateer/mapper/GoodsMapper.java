@@ -15,7 +15,7 @@ public interface GoodsMapper {
 
     Goods select(String goodsCode);
 
-    List<GoodsThumbnail> selectThumbnail(@Param("category") String category, @Param("quantity") int quantity);
+    List<GoodsThumbnail> selectThumbnail(@Param("categoryCode") String categoryCode, @Param("quantity") int quantity);
 
     List<CartGoods> selectCart(List<String> goodsCodeList);
 

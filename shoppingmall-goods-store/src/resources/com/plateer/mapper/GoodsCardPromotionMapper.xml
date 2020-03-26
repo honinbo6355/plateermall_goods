@@ -5,7 +5,12 @@
 <mapper namespace="com.plateer.mapper.GoodsCardPromotionMapper">
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.CardPromotion">
-        SELECT * FROM CardPromotion WHERE promotionId IN (SELECT promotionId FROM GoodsCardPromotion WHERE goodsCode = #{goodsCode})
+        SELECT *
+        FROM CardPromotion
+        WHERE promotionId IN (
+                                SELECT promotionId
+                                FROM GoodsCardPromotion
+                                WHERE goodsCode = #{goodsCode})
     </select>
 
 </mapper>

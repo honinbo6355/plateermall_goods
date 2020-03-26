@@ -11,7 +11,7 @@ public interface GoodsDao {
 
     Goods find(String goodsCode);
 
-    List<GoodsThumbnail> findThumbnail(String category, int quantity);
+    List<GoodsThumbnail> findThumbnail(String categoryCode, int quantity);
 
     List<CartGoods> findCart(List<String> goodsCodeList);
 

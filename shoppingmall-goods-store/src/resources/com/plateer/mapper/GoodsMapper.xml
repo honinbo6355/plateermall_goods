@@ -17,17 +17,17 @@
 
     <select id="selectThumbnail" resultType="com.plateer.domain.GoodsThumbnail">
 
-        SELECT imgUrl, goodsCode, copy, title, originalPrice, dcRate, saleCnt
+        SELECT goodsCode, imgUrl, copy, title, originalPrice, dcRate, saleCnt
         FROM Goods
         WHERE goodsCode IN (
                             SELECT goodsCode
-                            FROM Category
-                            WHERE name = #{category})
+                            FROM CategoryGoods
+                            WHERE categoryCode = #{categoryCode})
         LIMIT #{quantity}
     </select>
 
     <select id="selectCart" parameterType="java.util.List" resultType="com.plateer.domain.CartGoods">
-        SELECT imgUrl, goodsCode, seller, title, originalPrice, shippingFee, dcRate
+        SELECT goodsCode, imgUrl, seller, title, originalPrice, shippingFee, dcRate
         FROM Goods
         WHERE goodsCode IN
         <foreach collection="list" item="goodsCode" index="index" separator="," open="(" close=")">
@@ -44,6 +44,8 @@
     </update>
 
     <delete id="delete">
-        DELETE FROM Goods WHERE goodsCode = #{goodsCode}
+        DELETE
+        FROM Goods
+        WHERE goodsCode = #{goodsCode}
     </delete>
 </mapper>

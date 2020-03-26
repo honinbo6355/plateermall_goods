@@ -14,7 +14,7 @@ public interface GoodsService {
 
     Goods readGoods(String goodsCode);
 
-    List<GoodsThumbnail> readThumbnailGoods(String category, int qauntity);
+    List<GoodsThumbnail> readThumbnailGoods(String category, int quantity);
 
     List<CartGoods> readCartGoods(List<String> goodsCodeList);
 

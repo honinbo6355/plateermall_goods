@@ -28,9 +28,9 @@ public class GoodsLogic implements GoodsService {
     }
 
     @Override
-    public List<GoodsThumbnail> readThumbnailGoods(String category, int quantity) {
+    public List<GoodsThumbnail> readThumbnailGoods(String categoryCode, int quantity) {
 
-        return goodsDao.findThumbnail(category, quantity);
+        return goodsDao.findThumbnail(categoryCode, quantity);
     }
 
     @Override

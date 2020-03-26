@@ -9,6 +9,7 @@ import lombok.*;
 @ToString
 public class CardPromotion {
 
+    String promotionId;
     String card;
     int maximum;
     int minimum;

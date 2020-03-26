@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -29,10 +28,10 @@ public class GoodsController {
         return goodsLogic.readGoods(goodsCode);
     }
 
-    @GetMapping("/goodslist/{goodsSet}")
+    @GetMapping("/goodslist")
     public List<GoodsThumbnail> getGoodsList(GoodsSetDto goodsSetDto) {
 
-        return goodsLogic.readThumbnailGoods(goodsSetDto.getCategory(), goodsSetDto.getQuantity());
+        return goodsLogic.readThumbnailGoods(goodsSetDto.getCategoryCode(), goodsSetDto.getQuantity());
     }
 
     @PostMapping("/goodslist/cart")

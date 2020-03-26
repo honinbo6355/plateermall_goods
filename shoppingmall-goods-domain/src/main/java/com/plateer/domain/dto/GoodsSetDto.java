@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 public class GoodsSetDto {
 
-    private String category;
+    private String categoryCode;
     private int quantity;
 }

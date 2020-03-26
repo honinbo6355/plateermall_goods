@@ -9,7 +9,6 @@ import com.plateer.mapper.GoodsOptionMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -18,11 +17,11 @@ public class GoodsDaoImpl implements GoodsDao {
     @Autowired
     private GoodsMapper goodsMapper;
     @Autowired
-    private GoodsCardPromotionMapper goodsCardPromotionMapperMapper;
-    @Autowired
     private GoodsInfoMapper goodsInfoMapper;
     @Autowired
     private GoodsOptionMapper goodsOptionMapper;
+    @Autowired
+    private GoodsCardPromotionMapper goodsCardPromotionMapper;
 
 
     @Override
@@ -33,27 +32,44 @@ public class GoodsDaoImpl implements GoodsDao {
 
     @Override
     public Goods find(String goodsCode) {
-        Goods foundedGoods;
-        List<CardPromotion> cardPromotion;
-        List<InfoTableRow> infoTableRow;
-        List<Option> option;
+        Goods foundedGoods = null;
+        List<CardPromotion> cardPromotion = null;
+        List<InfoTableRow> infoTableRow = null;
+        List<Option> option = null;
 
-        cardPromotion = this.goodsCardPromotionMapperMapper.select(goodsCode);
-        infoTableRow = this.goodsInfoMapper.select(goodsCode);
-        option = this.goodsOptionMapper.select(goodsCode);
         foundedGoods = this.goodsMapper.select(goodsCode);
 
-        foundedGoods.setCardPromotions(cardPromotion);
+        try {
+            infoTableRow = this.goodsInfoMapper.select(goodsCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         foundedGoods.setInfoTable(infoTableRow);
+
+        try {
+            option = this.goodsOptionMapper.select(goodsCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         foundedGoods.setOptions(option);
+
+        try {
+            cardPromotion = this.goodsCardPromotionMapper.select(goodsCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        foundedGoods.setCardPromotions(cardPromotion);
 
         return foundedGoods;
     }
 
     @Override
-    public List<GoodsThumbnail> findThumbnail(String category, int quantity) {
+    public List<GoodsThumbnail> findThumbnail(String categoryCode, int quantity) {
 
-        return this.goodsMapper.selectThumbnail(category, quantity);
+        return this.goodsMapper.selectThumbnail(categoryCode, quantity);
     }
 
     @Override
