@@ -1,10 +1,13 @@
 package com.plateer.logic;
 
-import com.plateer.GoodsDao;
 import com.plateer.GoodsService;
+import com.plateer.domain.CartGoods;
 import com.plateer.domain.Goods;
+import com.plateer.domain.GoodsThumbnail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class GoodsLogic implements GoodsService {
@@ -20,8 +23,20 @@ public class GoodsLogic implements GoodsService {
 
     @Override
     public Goods readGoods(String goodsCode) {
-    //
-       return goodsDao.find(goodsCode);
+        //
+        return goodsDao.find(goodsCode);
+    }
+
+    @Override
+    public List<GoodsThumbnail> readThumbnailGoods(String category, int quantity) {
+
+        return goodsDao.findThumbnail(category, quantity);
+    }
+
+    @Override
+    public List<CartGoods> readCartGoods(List<String> goodsCodeList) {
+
+        return goodsDao.findCart(goodsCodeList);
     }
 
     @Override

@@ -10,8 +10,31 @@
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Goods">
-        SELECT * FROM Goods WHERE goodsCode = #{goodsCode}
+        SELECT *
+        FROM Goods
+        WHERE goodsCode = #{goodsCode}
     </select>
+
+    <select id="selectThumbnail" resultType="com.plateer.domain.GoodsThumbnail">
+
+        SELECT imgUrl, goodsCode, copy, title, originalPrice, dcRate, saleCnt
+        FROM Goods
+        WHERE goodsCode IN (
+                            SELECT goodsCode
+                            FROM Category
+                            WHERE name = #{category})
+        LIMIT #{quantity}
+    </select>
+
+    <select id="selectCart" parameterType="java.util.List" resultType="com.plateer.domain.CartGoods">
+        SELECT imgUrl, goodsCode, seller, title, originalPrice, shippingFee, dcRate
+        FROM Goods
+        WHERE goodsCode IN
+        <foreach collection="list" item="goodsCode" index="index" separator="," open="(" close=")">
+            #{goodsCode}
+        </foreach>
+    </select>
+
 
     <update id="update">
         UPDATE Goods SET
