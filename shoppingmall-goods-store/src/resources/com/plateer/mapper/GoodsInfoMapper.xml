@@ -5,8 +5,8 @@
 <mapper namespace="com.plateer.mapper.GoodsInfoMapper">
 
     <insert id="insert">
-        INSERT INTO Goods ()
-        VALUES (#{id},#{username},#{password},#{email},#{bio})
+        INSERT INTO GoodsInfo
+        VALUES (#{goodsCode}, #{head}, #{body})
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.InfoTableRow">
@@ -14,13 +14,16 @@
     </select>
 
     <update id="update">
-        UPDATE Goods SET
-
-
-        where goodsCode = #{goodsCode}
+        UPDATE GoodsInfo
+        SET goodsCode = newGoodsCode,
+            head = newHead
+            body = newBody
+        WHERE goodsCode = #{goodsCode} AND head = #{head}
     </update>
 
     <delete id="delete">
-        DELETE FROM Goods WHERE goodsCode = #{goodsCode}
+        DELETE
+        FROM GoodsInfo
+        WHERE goodsCode = #{goodsCode} AND head = #{head}
     </delete>
 </mapper>

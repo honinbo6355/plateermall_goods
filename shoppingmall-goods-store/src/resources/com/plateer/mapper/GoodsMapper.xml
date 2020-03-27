@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.plateer.mapper.GoodsMapper">
 
-    <insert id="insert">
-        INSERT INTO Goods ()
-        VALUES (#{id},#{username},#{password},#{email},#{bio})
+    <insert id="insert" parameterType="com.plateer.domain.Goods" >
+        INSERT INTO Goods
+        VALUES (#{goods.},#{username},#{password},#{email},#{bio})
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Goods">

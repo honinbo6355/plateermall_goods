@@ -5,8 +5,8 @@
 <mapper namespace="com.plateer.mapper.GoodsOptionMapper">
 
     <insert id="insert">
-        INSERT INTO Goods ()
-        VALUES (#{id},#{username},#{password},#{email},#{bio})
+        INSERT INTO GoodsOption ()
+        VALUES (#{goodsCode}, #{optionText})
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Option">
@@ -17,13 +17,14 @@
     </select>
 
     <update id="update">
-        UPDATE Goods SET
-
-
-        where goodsCode = #{goodsCode}
+        UPDATE GoodsOption
+        SET text = newOption
+        WHERE goodsCode = #{goodsCode} AND text = #{optionText}
     </update>
 
     <delete id="delete">
-        DELETE FROM Goods WHERE goodsCode = #{goodsCode}
+        DELETE
+        FROM GoodsOption
+        WHERE goodsCode = #{goodsCode} AND text = #{optionText}
     </delete>
 </mapper>

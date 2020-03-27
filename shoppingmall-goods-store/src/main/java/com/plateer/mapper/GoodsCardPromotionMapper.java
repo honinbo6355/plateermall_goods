@@ -7,7 +7,11 @@ import java.util.List;
 
 @Mapper
 public interface GoodsCardPromotionMapper {
+    String insert(String promotionId, String goodsCode);
 
     List<CardPromotion> select(String goodsCode);
 
+    void update(String promotionId, String goodsCode, String newPromotionId, String newGoodsCode);
+
+    void delete(String promotionId, String goodsCode);
 }
