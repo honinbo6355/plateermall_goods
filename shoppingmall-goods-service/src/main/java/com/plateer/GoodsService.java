@@ -18,7 +18,7 @@ public interface GoodsService {
 
     List<CartGoods> readCartGoods(List<String> goodsCodeList);
 
-    void updateGoods(Goods goods);
+    void updateGoods(String goodsCode, Goods newGoods);
 
     void deleteGoods(String goodsCode);
 }

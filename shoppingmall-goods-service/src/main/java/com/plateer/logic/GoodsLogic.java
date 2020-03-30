@@ -18,7 +18,7 @@ public class GoodsLogic implements GoodsService {
     @Override
     public void createGoods(Goods goods) {
 
-        //goodsDao.save(goods);
+        goodsDao.save(goods);
     }
 
     @Override
@@ -40,14 +40,14 @@ public class GoodsLogic implements GoodsService {
     }
 
     @Override
-    public void updateGoods(Goods goods) {
+    public void updateGoods(String goodsCode, Goods newGoods) {
 
-        //goodsDao.update(goods);
+        goodsDao.update(goodsCode, newGoods);
     }
 
     @Override
     public void deleteGoods(String goodsCode) {
 
-        //goodsDao.delete(goodsCode);
+        goodsDao.delete(goodsCode);
     }
 }

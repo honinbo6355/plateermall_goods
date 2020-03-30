@@ -19,7 +19,7 @@ public interface GoodsMapper {
 
     List<CartGoods> selectCart(List<String> goodsCodeList);
 
-    void update(Goods goods);
+    void update(String goodsCode, Goods newGoods);
 
     void delete(String goodsCode);
 }

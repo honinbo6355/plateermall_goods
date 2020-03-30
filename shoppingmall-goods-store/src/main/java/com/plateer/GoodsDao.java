@@ -15,7 +15,7 @@ public interface GoodsDao {
 
     List<CartGoods> findCart(List<String> goodsCodeList);
 
-    void update(Goods goods);
+    void update(String goodsCode, Goods newGoods);
 
     void delete(String goodsCode);
 }

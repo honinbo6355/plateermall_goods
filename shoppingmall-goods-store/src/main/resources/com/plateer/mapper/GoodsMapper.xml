@@ -4,9 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.plateer.mapper.GoodsMapper">
 
-    <insert id="insert" parameterType="com.plateer.domain.Goods" >
+    <insert id="insert" parameterType="com.plateer.domain.Goods">
         INSERT INTO Goods
-        VALUES (#{goods.},#{username},#{password},#{email},#{bio})
+        VALUES (
+                #{goods.uuid}, #{goods.goodsCode}, #{goods.imgUrl}, #{goods.modelNo}, #{goods.seller}, #{goods.copy},
+                #{goods.title}, #{goods.originalPrice}, #{goods.shippingFee}, #{goods.dcRate}, #{goods.saleCnt},
+                #{goods.shippingDays}, #{goods.notice}, #{goods.goodsDetail}, null, null, null)
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Goods">
@@ -16,7 +19,6 @@
     </select>
 
     <select id="selectThumbnail" resultType="com.plateer.domain.GoodsThumbnail">
-
         SELECT goodsCode, imgUrl, copy, title, originalPrice, dcRate, saleCnt
         FROM Goods
         WHERE goodsCode IN (
@@ -37,10 +39,20 @@
 
 
     <update id="update">
-        UPDATE Goods SET
-
-
-        where goodsCode = #{goodsCode}
+        UPDATE Goods
+        SET imgUrl = #{newGoods.imgUrl},
+            modelNo = #{newGoods.modelNo},
+            seller = #{newGoods.seller},
+            copy = #{newGoods.copy},
+            title = #{newGoods.title},
+            originalPrice = #{newGoods.originalPrice},
+            shippingFee = #{newGoods.shippingFee},
+            dcRate = #{newGoods.dcRate},
+            saleCnt = #{newGoods.saleCnt},
+            shippingDays = #{newGoods.shippingDays},
+            notice = #{newGoods.notice},
+            goodsDetail = #{newGoods.goodsDetail}
+        where goodsCode = #{goods.goodsCode}
     </update>
 
     <delete id="delete">

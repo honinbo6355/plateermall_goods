@@ -79,9 +79,9 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public void update(Goods goods) {
+    public void update(String goodsCode, Goods newGoods) {
 
-        this.goodsMapper.update(goods);
+        this.goodsMapper.update(goodsCode, newGoods);
     }
 
     @Override

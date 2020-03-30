@@ -11,6 +11,7 @@ import lombok.*;
 @ToString
 public class Goods {
 
+    private String uuid;
     private String goodsCode;
     private String imgUrl;
     private String modelNo;
