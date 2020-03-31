@@ -13,7 +13,7 @@ import java.util.List;
 @Slf4j
 @CrossOrigin(allowCredentials = "true", origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT},
         allowedHeaders = {"Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-                "Access-Control-Request-'head'ers", "Access-Control-Allow-Origin", "Set-Cookie", "token"},
+                "Access-Control-Request-'head'ers", "Access-Control-Allow-Origin", "Set-Cookie", "Authorization"},
         exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials", "token"}, maxAge = 3000)
 @RestController
 @RequestMapping("/api/goods")
@@ -39,5 +39,4 @@ public class GoodsController {
 
         return goodsLogic.readCartGoods(goodsCodeList);
     }
-
 }

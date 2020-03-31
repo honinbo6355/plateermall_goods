@@ -13,6 +13,7 @@ public class Category {
 
     String uuid;
     String name;
-    String parentsId;
+    String categoryCode;
+    String parentsCode;
     List<String> goodsList;
 }
