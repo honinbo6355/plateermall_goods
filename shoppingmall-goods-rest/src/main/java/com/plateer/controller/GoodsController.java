@@ -2,7 +2,9 @@ package com.plateer.controller;
 
 import com.plateer.domain.*;
 
+import com.plateer.domain.dto.CategoryGoodsSetDto;
 import com.plateer.domain.dto.GoodsSetDto;
+import com.plateer.domain.dto.QueryDto;
 import com.plateer.logic.GoodsLogic;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,11 @@ public class GoodsController {
         return goodsLogic.readGoods(goodsCode);
     }
 
+    @GetMapping("/categorygoodslist")
+    public List<GoodsThumbnail> getCategoryGoods(CategoryGoodsSetDto categoryGoodsSetDto) {
+        return goodsLogic.readCategoryGoods(categoryGoodsSetDto.getCategoryCode(), categoryGoodsSetDto.getSort());
+    }
+
     @GetMapping("/goodslist")
     public List<GoodsThumbnail> getGoodsList(GoodsSetDto goodsSetDto) {
 
@@ -39,4 +46,12 @@ public class GoodsController {
 
         return goodsLogic.readCartGoods(goodsCodeList);
     }
+
+
+    @GetMapping("/searchresultlist")
+    public List<GoodsThumbnail> getSearchList(QueryDto queryDto) {
+
+        return goodsLogic.readSearchGoods(queryDto.getQuery(), queryDto.getSort());
+    }
+
 }

@@ -21,6 +21,7 @@ public class Goods {
     private int originalPrice;
     private int shippingFee;
     private int dcRate;
+    private int benefitPrice;
     private int saleCnt;
     private int shippingDays;
     private String notice;

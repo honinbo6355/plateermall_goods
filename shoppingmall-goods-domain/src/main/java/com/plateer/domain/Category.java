@@ -15,5 +15,6 @@ public class Category {
     String name;
     String categoryCode;
     String parentsCode;
+    String comment;
     List<String> goodsList;
 }

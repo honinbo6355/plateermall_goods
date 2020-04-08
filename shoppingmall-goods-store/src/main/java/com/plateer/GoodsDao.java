@@ -11,9 +11,13 @@ public interface GoodsDao {
 
     Goods find(String goodsCode);
 
+    List<GoodsThumbnail> findCategory(String categoryCode, String sort);
+
     List<GoodsThumbnail> findThumbnail(String categoryCode, int quantity);
 
     List<CartGoods> findCart(List<String> goodsCodeList);
+
+    List<GoodsThumbnail> findSearchResult(String query, String sort);
 
     void update(String goodsCode, Goods newGoods);
 

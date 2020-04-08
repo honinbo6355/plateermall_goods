@@ -17,4 +17,5 @@ public class GoodsThumbnail {
     private int originalPrice;
     private int dcRate;
     private int saleCnt;
+    private int benefitPrice;
 }

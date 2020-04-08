@@ -13,13 +13,39 @@
     </insert>
 
     <select id="select" parameterType="string" resultType="com.plateer.domain.Goods">
-        SELECT *
+        SELECT *, (originalPrice * (100 - dcRate) / 100) AS benefitPrice
         FROM Goods
         WHERE goodsCode = #{goodsCode}
     </select>
 
+
+    <select id="selectCategory" resultType="com.plateer.domain.GoodsThumbnail">
+        SELECT goodsCode, imgUrl, seller, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) /
+        100) AS benefitPrice
+        FROM Goods
+        WHERE goodsCode IN (
+        SELECT goodsCode
+        FROM CategoryGoods
+        WHERE categoryCode = #{categoryCode})
+        ORDER BY
+        <choose>
+            <when test="sort == 'goodsCode/DESC'">
+                goodsCode DESC
+            </when>
+            <when test="sort == 'saleCnt/DESC'">
+                saleCnt DESC
+            </when>
+            <when test="sort == 'benefitPrice/ASC'">
+                benefitPrice ASC
+            </when>
+            <when test="sort == 'benefitPrice/DESC'">
+                benefitPrice DESC
+            </when>
+        </choose>
+    </select>
+
     <select id="selectThumbnail" resultType="com.plateer.domain.GoodsThumbnail">
-        SELECT goodsCode, imgUrl, copy, title, originalPrice, dcRate, saleCnt
+        SELECT goodsCode, imgUrl, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) / 100) AS benefitPrice
         FROM Goods
         WHERE goodsCode IN (
                             SELECT goodsCode
@@ -29,7 +55,8 @@
     </select>
 
     <select id="selectCart" parameterType="java.util.List" resultType="com.plateer.domain.CartGoods">
-        SELECT goodsCode, imgUrl, seller, title, originalPrice, shippingFee, dcRate
+        SELECT goodsCode, imgUrl, seller, title, originalPrice, shippingFee, dcRate, (originalPrice * (100 - dcRate) /
+        100) AS benefitPrice
         FROM Goods
         WHERE goodsCode IN
         <foreach collection="list" item="goodsCode" index="index" separator="," open="(" close=")">
@@ -37,6 +64,27 @@
         </foreach>
     </select>
 
+    <select id="selectSearch" resultType="com.plateer.domain.GoodsThumbnail">
+        SELECT goodsCode, imgUrl, seller, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) /
+        100) AS benefitPrice
+        FROM Goods
+        WHERE title LIKE CONCAT("%", #{query}, "%") OR seller LIKE CONCAT("%", #{query}, "%")
+        ORDER BY
+        <choose>
+            <when test="sort == 'goodsCode/DESC'">
+                goodsCode DESC
+            </when>
+            <when test="sort == 'saleCnt/DESC'">
+                saleCnt DESC
+            </when>
+            <when test="sort == 'benefitPrice/ASC'">
+                benefitPrice ASC
+            </when>
+            <when test="sort == 'benefitPrice/DESC'">
+                benefitPrice DESC
+            </when>
+        </choose>
+    </select>
 
     <update id="update">
         UPDATE Goods

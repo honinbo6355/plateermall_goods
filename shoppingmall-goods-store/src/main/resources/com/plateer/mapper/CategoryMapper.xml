@@ -15,7 +15,7 @@
     </select>
 
     <select id="selectCategoryList" resultType="com.plateer.domain.Category">
-        SELECT *
+        SELECT uuid, categoryCode, name, parentsCode
         FROM Category
         WHERE parentsCode = #{categoryCode}
         ORDER BY priority

@@ -16,4 +16,5 @@ public class CartGoods {
     private int originalPrice;
     private int shippingFee;
     private int dcRate;
+    private int benefitPrice;
 }

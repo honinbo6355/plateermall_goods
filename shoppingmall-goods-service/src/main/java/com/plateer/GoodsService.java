@@ -14,9 +14,13 @@ public interface GoodsService {
 
     Goods readGoods(String goodsCode);
 
+    List<GoodsThumbnail> readCategoryGoods(String categoryCode, String sort);
+
     List<GoodsThumbnail> readThumbnailGoods(String category, int quantity);
 
     List<CartGoods> readCartGoods(List<String> goodsCodeList);
+
+    List<GoodsThumbnail> readSearchGoods(String query, String sort);
 
     void updateGoods(String goodsCode, Goods newGoods);
 
