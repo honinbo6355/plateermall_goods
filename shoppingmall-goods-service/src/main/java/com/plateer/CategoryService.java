@@ -16,6 +16,8 @@ public interface CategoryService {
 
     List<String> readCategoryGoodsList(String categoryCode);
 
+    List<Category> readGoodsCategoryList(String goodsCode);
+
     void updateCategory(String categoryCode, Category newCategory);
 
     void deleteCategory(String categoryCode);

@@ -2,6 +2,8 @@ package com.plateer.domain;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -18,4 +20,5 @@ public class GoodsThumbnail {
     private int dcRate;
     private int saleCnt;
     private int benefitPrice;
+    private List<Category> categories;
 }

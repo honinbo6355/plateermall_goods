@@ -2,10 +2,7 @@ package com.plateer.logic;
 
 import com.plateer.GoodsDao;
 import com.plateer.domain.*;
-import com.plateer.mapper.GoodsMapper;
-import com.plateer.mapper.GoodsCardPromotionMapper;
-import com.plateer.mapper.GoodsInfoMapper;
-import com.plateer.mapper.GoodsOptionMapper;
+import com.plateer.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -22,6 +19,8 @@ public class GoodsDaoImpl implements GoodsDao {
     private GoodsOptionMapper goodsOptionMapper;
     @Autowired
     private GoodsCardPromotionMapper goodsCardPromotionMapper;
+    @Autowired
+    private CategoryMapper categoryMapper;
 
 
     @Override
@@ -36,6 +35,7 @@ public class GoodsDaoImpl implements GoodsDao {
         List<CardPromotion> cardPromotion = null;
         List<InfoTableRow> infoTableRow = null;
         List<Option> option = null;
+        List<Category> categories = null;
 
         foundedGoods = this.goodsMapper.select(goodsCode);
 

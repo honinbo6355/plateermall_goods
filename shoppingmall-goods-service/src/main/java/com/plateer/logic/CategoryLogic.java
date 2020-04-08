@@ -37,6 +37,12 @@ public class CategoryLogic implements CategoryService {
     }
 
     @Override
+    public List<Category> readGoodsCategoryList(String goodsCode) {
+
+        return categoryDao.findGoodsCategoryList(goodsCode);
+    }
+
+    @Override
     public void updateCategory(String categoryCode, Category newCategory) {
 
         categoryDao.update(categoryCode, newCategory);

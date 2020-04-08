@@ -42,6 +42,16 @@ public class CategoryDaoImpl implements CategoryDao {
     }
 
     @Override
+    public List<Category> findGoodsCategoryList(String goodsCode) {
+
+        List<Category> foundedCategory = null;
+
+        foundedCategory = this.categoryMapper.selectGoodsCategory(goodsCode); // 카테고리의 상품 목록을 가져올 때 사용
+
+        return foundedCategory;
+    }
+
+    @Override
     public List<Category> findCategoryList(String categoryCode) {
 
         List<Category> categoryList = null;

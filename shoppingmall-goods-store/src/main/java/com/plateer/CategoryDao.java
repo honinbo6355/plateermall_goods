@@ -13,6 +13,8 @@ public interface CategoryDao {
 
     List<String> findCategoryGoodsList(String categoryCode);
 
+    List<Category> findGoodsCategoryList(String goodsCode);
+
     List<Category> findCategoryList(String categoryCode);
 
     void update(String categoryCode, Category newCategory);
