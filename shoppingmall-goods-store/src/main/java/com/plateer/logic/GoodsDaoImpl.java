@@ -36,7 +36,6 @@ public class GoodsDaoImpl implements GoodsDao {
         List<CardPromotion> cardPromotion = null;
         List<InfoTableRow> infoTableRow = null;
         List<Option> option = null;
-        List<Category> categories = null;
 
         foundedGoods = this.goodsMapper.select(goodsCode);
 
@@ -91,10 +90,28 @@ public class GoodsDaoImpl implements GoodsDao {
         return foundedGoodsList;
     }
 
+//    @Override
+//    public List<GoodsThumbnail> findPageGoods(QueryDto queryDto) {
+//
+//        return this.goodsMapper.selectPageGoods(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
+//    }
+
     @Override
     public List<GoodsThumbnail> findPageGoods(QueryDto queryDto) {
+        List<GoodsThumbnail> foundedGoodsList = this.goodsMapper.selectPageGoods(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
 
-        return this.goodsMapper.selectPageGoods(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
+        for (GoodsThumbnail goods : foundedGoodsList) {
+            List<Category> categories = null;
+            try {
+                categories = this.categoryMapper.selectGoodsCategory(goods.getGoodsCode());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            goods.setCategories(categories);
+        }
+
+        return foundedGoodsList;
     }
 
     @Override

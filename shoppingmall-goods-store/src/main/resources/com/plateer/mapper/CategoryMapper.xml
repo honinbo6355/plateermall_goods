@@ -28,11 +28,12 @@
     </select>
 
     <select id="selectGoodsCategory" resultType="com.plateer.domain.Category">
-        SELECT *
+        SELECT uuid, categoryCode, name, parentsCode
         FROM Category
         WHERE categoryCode IN (SELECT categoryCode
                                 FROM CategoryGoods
                                 WHERE goodsCode = #{goodsCode})
+                AND parentsCode != "20000"
     </select>
 
     <update id="update">
