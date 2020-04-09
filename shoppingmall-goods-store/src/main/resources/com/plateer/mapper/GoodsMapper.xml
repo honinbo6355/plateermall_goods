@@ -68,7 +68,17 @@
         SELECT goodsCode, imgUrl, seller, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) /
         100) AS benefitPrice
         FROM Goods
-        WHERE title LIKE CONCAT("%", #{query}, "%") OR seller LIKE CONCAT("%", #{query}, "%")
+        <where>
+            <if test="query != ''">
+                (title LIKE CONCAT("%", #{query}, "%") OR seller LIKE CONCAT("%", #{query}, "%"))
+            </if>
+            <if test="categoryCode != ''">
+                categoryCode = #{categoryCode})
+            </if>
+            <if test="minPrice != ''">
+                AND (benefitPrice >= #{minPrice} AND benefitPrice >= #{maxPrice})
+            </if>
+        </where>
         ORDER BY
         <choose>
             <when test="sort == 'goodsCode/DESC'">

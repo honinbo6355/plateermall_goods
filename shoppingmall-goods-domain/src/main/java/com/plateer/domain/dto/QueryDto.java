@@ -8,5 +8,7 @@ import lombok.Setter;
 public class QueryDto {
     private String query;
     private String sort;
-    private String seller;
+    private String minPrice;
+    private String maxPrice;
+    private String categoryCode;
 }

@@ -3,6 +3,7 @@ package com.plateer;
 import com.plateer.domain.CartGoods;
 import com.plateer.domain.Goods;
 import com.plateer.domain.GoodsThumbnail;
+import com.plateer.domain.dto.QueryDto;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface GoodsDao {
 
     List<CartGoods> findCart(List<String> goodsCodeList);
 
-    List<GoodsThumbnail> findSearchResult(String query, String sort);
+    List<GoodsThumbnail> findSearchResult(QueryDto queryDto);
 
     void update(String goodsCode, Goods newGoods);
 

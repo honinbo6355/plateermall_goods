@@ -4,6 +4,7 @@ import com.plateer.GoodsService;
 import com.plateer.domain.CartGoods;
 import com.plateer.domain.Goods;
 import com.plateer.domain.GoodsThumbnail;
+import com.plateer.domain.dto.QueryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,9 +47,9 @@ public class GoodsLogic implements GoodsService {
     }
 
     @Override
-    public List<GoodsThumbnail> readSearchGoods(String query, String sort) {
+    public List<GoodsThumbnail> readSearchGoods(QueryDto queryDto) {
 
-        return goodsDao.findSearchResult(query, sort);
+        return goodsDao.findSearchResult(queryDto);
     }
 
     @Override

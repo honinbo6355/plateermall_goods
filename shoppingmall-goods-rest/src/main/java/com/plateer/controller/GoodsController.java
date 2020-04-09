@@ -48,10 +48,10 @@ public class GoodsController {
     }
 
 
-    @GetMapping("/searchresultlist")
-    public List<GoodsThumbnail> getSearchList(QueryDto queryDto) {
+    @PostMapping("/searchresultlist")
+    public List<GoodsThumbnail> getSearchList(@RequestBody QueryDto queryDto) {
 
-        return goodsLogic.readSearchGoods(queryDto.getQuery(), queryDto.getSort());
+        return goodsLogic.readSearchGoods(queryDto);
     }
 
 }

@@ -2,6 +2,7 @@ package com.plateer.logic;
 
 import com.plateer.GoodsDao;
 import com.plateer.domain.*;
+import com.plateer.domain.dto.QueryDto;
 import com.plateer.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -85,9 +86,9 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public List<GoodsThumbnail> findSearchResult(String query, String sort) {
+    public List<GoodsThumbnail> findSearchResult(QueryDto queryDto) {
 
-        return this.goodsMapper.selectSearch(query, sort);
+        return this.goodsMapper.selectSearch(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
     }
 
     @Override

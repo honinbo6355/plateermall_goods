@@ -3,6 +3,8 @@ package com.plateer;
 import com.plateer.domain.CartGoods;
 import com.plateer.domain.Goods;
 import com.plateer.domain.GoodsThumbnail;
+import com.plateer.domain.dto.QueryDto;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +22,7 @@ public interface GoodsService {
 
     List<CartGoods> readCartGoods(List<String> goodsCodeList);
 
-    List<GoodsThumbnail> readSearchGoods(String query, String sort);
+    List<GoodsThumbnail> readSearchGoods(QueryDto queryDto);
 
     void updateGoods(String goodsCode, Goods newGoods);
 
