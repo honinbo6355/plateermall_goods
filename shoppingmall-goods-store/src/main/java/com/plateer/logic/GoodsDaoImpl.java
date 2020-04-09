@@ -7,6 +7,7 @@ import com.plateer.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -22,7 +23,6 @@ public class GoodsDaoImpl implements GoodsDao {
     private GoodsCardPromotionMapper goodsCardPromotionMapper;
     @Autowired
     private CategoryMapper categoryMapper;
-
 
     @Override
     public void save(Goods goods) {
@@ -75,8 +75,20 @@ public class GoodsDaoImpl implements GoodsDao {
 
     @Override
     public List<CartGoods> findCart(List<String> goodsCodeList) {
+        List<CartGoods> foundedGoodsList = this.goodsMapper.selectCart(goodsCodeList);
 
-        return this.goodsMapper.selectCart(goodsCodeList);
+        for (CartGoods goods : foundedGoodsList) {
+            List<CardPromotion> cardPromotion = null;
+            try {
+                cardPromotion = this.goodsCardPromotionMapper.select(goods.getGoodsCode());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            goods.setCardPromotions(cardPromotion);
+        }
+
+        return foundedGoodsList;
     }
 
     @Override
