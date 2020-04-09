@@ -18,32 +18,6 @@
         WHERE goodsCode = #{goodsCode}
     </select>
 
-
-    <select id="selectCategory" resultType="com.plateer.domain.GoodsThumbnail">
-        SELECT goodsCode, imgUrl, seller, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) /
-        100) AS benefitPrice
-        FROM Goods
-        WHERE goodsCode IN (
-        SELECT goodsCode
-        FROM CategoryGoods
-        WHERE categoryCode = #{categoryCode})
-        ORDER BY
-        <choose>
-            <when test="sort == 'goodsCode/DESC'">
-                goodsCode DESC
-            </when>
-            <when test="sort == 'saleCnt/DESC'">
-                saleCnt DESC
-            </when>
-            <when test="sort == 'benefitPrice/ASC'">
-                benefitPrice ASC
-            </when>
-            <when test="sort == 'benefitPrice/DESC'">
-                benefitPrice DESC
-            </when>
-        </choose>
-    </select>
-
     <select id="selectThumbnail" resultType="com.plateer.domain.GoodsThumbnail">
         SELECT goodsCode, imgUrl, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) / 100) AS benefitPrice
         FROM Goods
@@ -64,19 +38,24 @@
         </foreach>
     </select>
 
-    <select id="selectSearch" resultType="com.plateer.domain.GoodsThumbnail">
+    <select id="selectPageGoods" resultType="com.plateer.domain.GoodsThumbnail">
+
         SELECT goodsCode, imgUrl, seller, copy, title, originalPrice, dcRate, saleCnt, (originalPrice * (100 - dcRate) /
         100) AS benefitPrice
         FROM Goods
         <where>
-            <if test="query != ''">
-                (title LIKE CONCAT("%", #{query}, "%") OR seller LIKE CONCAT("%", #{query}, "%"))
-            </if>
             <if test="categoryCode != ''">
-                categoryCode = #{categoryCode})
+                goodsCode IN (
+                SELECT goodsCode
+                FROM CategoryGoods
+                WHERE categoryCode = #{categoryCode})
+            </if>
+            <if test="query != ''">
+                AND (title LIKE CONCAT("%", #{query}, "%") OR seller LIKE CONCAT("%", #{query}, "%"))
             </if>
             <if test="minPrice != ''">
-                AND (benefitPrice >= #{minPrice} AND benefitPrice >= #{maxPrice})
+                AND ((originalPrice * (100 - dcRate) / 100) >= #{minPrice}
+                 AND #{maxPrice} >= (originalPrice * (100 - dcRate) / 100))
             </if>
         </where>
         ORDER BY

@@ -12,13 +12,11 @@ public interface GoodsDao {
 
     Goods find(String goodsCode);
 
-    List<GoodsThumbnail> findCategory(String categoryCode, String sort);
-
     List<GoodsThumbnail> findThumbnail(String categoryCode, int quantity);
 
     List<CartGoods> findCart(List<String> goodsCodeList);
 
-    List<GoodsThumbnail> findSearchResult(QueryDto queryDto);
+    List<GoodsThumbnail> findPageGoods(QueryDto queryDto);
 
     void update(String goodsCode, Goods newGoods);
 

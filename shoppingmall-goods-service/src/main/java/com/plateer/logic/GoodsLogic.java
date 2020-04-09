@@ -29,12 +29,6 @@ public class GoodsLogic implements GoodsService {
     }
 
     @Override
-    public List<GoodsThumbnail> readCategoryGoods(String categoryCode, String sort) {
-
-        return goodsDao.findCategory(categoryCode, sort);
-    }
-
-    @Override
     public List<GoodsThumbnail> readThumbnailGoods(String categoryCode, int quantity) {
 
         return goodsDao.findThumbnail(categoryCode, quantity);
@@ -47,9 +41,9 @@ public class GoodsLogic implements GoodsService {
     }
 
     @Override
-    public List<GoodsThumbnail> readSearchGoods(QueryDto queryDto) {
+    public List<GoodsThumbnail> readPageGoods(QueryDto queryDto) {
 
-        return goodsDao.findSearchResult(queryDto);
+        return goodsDao.findPageGoods(queryDto);
     }
 
     @Override

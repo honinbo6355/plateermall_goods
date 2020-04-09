@@ -68,12 +68,6 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public List<GoodsThumbnail> findCategory(String categoryCode, String sort) {
-
-        return this.goodsMapper.selectCategory(categoryCode, sort);
-    }
-
-    @Override
     public List<GoodsThumbnail> findThumbnail(String categoryCode, int quantity) {
 
         return this.goodsMapper.selectThumbnail(categoryCode, quantity);
@@ -86,9 +80,9 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public List<GoodsThumbnail> findSearchResult(QueryDto queryDto) {
+    public List<GoodsThumbnail> findPageGoods(QueryDto queryDto) {
 
-        return this.goodsMapper.selectSearch(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
+        return this.goodsMapper.selectPageGoods(queryDto.getQuery(), queryDto.getSort(), queryDto.getCategoryCode(), queryDto.getMinPrice(), queryDto.getMaxPrice());
     }
 
     @Override

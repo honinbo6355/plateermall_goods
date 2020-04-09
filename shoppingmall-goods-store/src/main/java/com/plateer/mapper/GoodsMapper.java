@@ -15,13 +15,11 @@ public interface GoodsMapper {
 
     Goods select(String goodsCode);
 
-    List<GoodsThumbnail> selectCategory(@Param("categoryCode") String categoryCode, @Param("sort") String sort);
-
     List<GoodsThumbnail> selectThumbnail(@Param("categoryCode") String categoryCode, @Param("quantity") int quantity);
 
     List<CartGoods> selectCart(List<String> goodsCodeList);
 
-    List<GoodsThumbnail> selectSearch(@Param("query") String query, @Param("sort") String sort, @Param("categoryCode") String categoryCode, @Param("minPrice") String minPrice, @Param("maxPrice") String maxPrice);
+    List<GoodsThumbnail> selectPageGoods(@Param("query") String query, @Param("sort") String sort, @Param("categoryCode") String categoryCode, @Param("minPrice") String minPrice, @Param("maxPrice") String maxPrice);
 
     void update(String goodsCode, Goods newGoods);
 

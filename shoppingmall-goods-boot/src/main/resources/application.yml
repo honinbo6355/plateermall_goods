@@ -1,5 +1,7 @@
 server:
   port: 9999
+banner:
+  location: classpath:/banner.txt
 spring:
   datasource:
     profiles: local

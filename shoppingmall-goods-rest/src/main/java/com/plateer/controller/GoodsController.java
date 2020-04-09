@@ -30,9 +30,9 @@ public class GoodsController {
         return goodsLogic.readGoods(goodsCode);
     }
 
-    @GetMapping("/categorygoodslist")
-    public List<GoodsThumbnail> getCategoryGoods(CategoryGoodsSetDto categoryGoodsSetDto) {
-        return goodsLogic.readCategoryGoods(categoryGoodsSetDto.getCategoryCode(), categoryGoodsSetDto.getSort());
+    @PostMapping("/pagegoodslist")
+    public List<GoodsThumbnail> getPageGoods(@RequestBody QueryDto queryDto) {
+        return goodsLogic.readPageGoods(queryDto);
     }
 
     @GetMapping("/goodslist")
@@ -45,13 +45,6 @@ public class GoodsController {
     public List<CartGoods> getCartGoodsList(@RequestBody List<String> goodsCodeList) {
 
         return goodsLogic.readCartGoods(goodsCodeList);
-    }
-
-
-    @PostMapping("/searchresultlist")
-    public List<GoodsThumbnail> getSearchList(@RequestBody QueryDto queryDto) {
-
-        return goodsLogic.readSearchGoods(queryDto);
     }
 
 }
