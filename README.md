@@ -5,4 +5,4 @@
 <br />
 
 ### class diagram
-![ex_screenshot](https://gitlab.com/2020-flateer/plateer_project/shoppingmall_goods/-/raw/master/ClassDiagram.png)
+![ClassDiagram](https://user-images.githubusercontent.com/29749722/96672962-5b286080-13a0-11eb-9767-81e9dbf44b88.png)
